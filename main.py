@@ -1,8 +1,7 @@
 import time
 
 status = True
-y="Yes"
-n="No"
+
 while status:
   print("\n")
   print("Welcome to the story of John and James. This will be an interactive program, Please pay attention and pick an option of your choice..")
@@ -32,5 +31,41 @@ while status:
     break
 
   print("\n")
+  print("A. John changes his attitude towards education and starts taking it seriously.")
+  print("B. John continues with the same attitude he had towards education in Spain, without studying or completing any homework.")
   decision = input(
-      "What do you think John did? \n\nA. John changes his attitude towards education and starts taking it seriously. \nB. John continues with the same attitude he had towards education in Spain, without studying or completing any homework.")
+      "What do you think John did?\nPlease pick an option between A or B: ")
+  if decision.casefold() == "a":
+    print('\n')
+    time.sleep(1)
+    print("John then proceeded to start secondary school in England and his mentality towards education changed. His grades started to improve and his old habits were disappearing, however, there was one subject that John couldn’t understand but he thought he would be fine because he never experienced failure before. He ended up failing English and was forced to waste a year before starting his level 3 course. It was very painful for him as he saw his secondary school peers going to university when he was on his second year of his level 3 course.  However, that did not demotivate John to do his best and receive an offer from the university he wanted to go to. John managed to meet the requirements of that university. John went through a lot of obstacles that were preventing him from succeeding but he manged to overcome them. On his first day of university, John met James.")
+  elif decision.casefold() == "b":
+    print("\n")
+    time.sleep(1)
+    print("John continued with the same mentality he had when he was in Spain and didn’t take his education seriously. Because of that, John was placed on the lower sets in every subject and as expected, his GCSE results were poor. His parents were very disappointed but instead of giving up on him, his parents decided to make his life miserable. John started a level 2 course while resitting his English and mathematics GCSE exam and during that year, John wasn’t aloud to use his phone or watch tv for more than 3 h a day until his grades started to improve.")
+  else:
+    print("\n")
+    print("You've inputted a the wrong option. Program terminating in 2 seconds")
+    status = False
+    time.sleep(2)
+    break
+
+  print("\n")
+  print("A. John listens to his parents and takes his education seriously")
+  print("B. John continues to disobey his parents and not take his education seriously.")
+  decision2 = input(
+      "What do you think John did?\nPlease pick an option between A or B: ")
+  if decision2.casefold() == "a":
+    print('\n')
+    time.sleep(1)
+    print("John realised that it was a better option to study and receive good grades as it would not only make her parents proud, but it would also be beneficial for him to have a better future. John ended up passing his English and maths GCSE exam as well as the btec level 2 course. He then proceeded to complete a btec level 3 course and even though he struggled at times, he still pushed forward and passed with a great score. After that John went to university and on his first day, he met James.")
+  elif decision2.casefold() == "b":
+    print('\n')
+    time.sleep(1)
+    print("John continued to disobey his parents and not take his education seriously despite all the parents’ efforts to change his life for the better. John ended up leaving his parents’ house at the age of 18 and started working in a factory.")
+  else:
+    print("\n")
+    print("You've inputted a the wrong option. Program terminating in 2 seconds")
+    status = False
+    time.sleep(2)
+    break
